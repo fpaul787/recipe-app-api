@@ -14,7 +14,8 @@ class CommandTests(TestCase):
             call_command('wait_for_db')
             self.assertEqual(gi.call_count, 1)
 
-    @patch('time.sleep', return_value=True)
+    # mocking time.sleep to speed up test
+    @patch('time.sleep', return_value=None)
     def test_wait_for_db(self, ts):
         """Test waiting for db"""
         with patch('django.db.utils.ConnectionHandler.__getitem__') as gi:
