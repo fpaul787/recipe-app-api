@@ -96,7 +96,7 @@ class PublicUserApiTests(TestCase):  # for public api
 
 
 class PrivateUserApiTests(TestCase):
-    """Test API requrests that require authntication"""
+    """Test API requires that require authntication"""
 
     def setUp(self):
         self.user = create_user(
