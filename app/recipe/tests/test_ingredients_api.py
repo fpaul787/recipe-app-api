@@ -15,7 +15,6 @@ INGREDIENTS_URL = reverse('recipe:ingredient-list')
 class PublicIngredientsApiTests(TestCase):
     """Test the publicly available ingredients API"""
 
-
     def setUp(self):
         self.client = APIClient()
 
@@ -39,7 +38,7 @@ class PrivateIngredientsApiTests(TestCase):
 
     def test_retrieve_ingredient_list(self):
         """Test retrieving a list of ingredients"""
-        Ingredient.objects.create(user=self.user, name='Kale')
+        Ingredient.objects.create(user=self.user, name='kale')
         Ingredient.objects.create(user=self.user, name='pepper')
 
         res = self.client.get(INGREDIENTS_URL)
