@@ -147,7 +147,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = '/vol/web/media'  # where to store media files
-STATIC_ROOT = '/vol/web/static'
+# MEDIA_ROOT = '/vol/web/media'  # where to store media files
+# STATIC_ROOT = '/vol/web/static'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "www", "static")
+MEDIA_ROOT = os.path.join(BASE_DIR, "www", "media")
 
 AUTH_USER_MODEL = 'core.User'
