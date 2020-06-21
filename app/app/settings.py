@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'e+qj*%_u$9)lc@6p3i0h#z5d@3_s=5l5w^d4mke-it2bykrvn4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['recipe-env-2.eba-w4qxpp27.us-east-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
